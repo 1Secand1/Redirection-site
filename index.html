@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script defer src="script.js"></script>
+  <title>Сraigslist</title>
+<link rel="shortcut icon" href="Frame-5062.ico" type="image/x-icon">
+</head>
+<header>
+</header>
+
+<body>
+  <div class="wrapper">
+
+    <div class=" burger-menu">
+      <button class="burger-menu__btn" onclick="MenuHandler('burger-menu').removeClass('burger-menu--active')"></button>
+
+      <ul class="sidebar__nav">
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab1', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>Community</h2>
+        </li>
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab2', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>Housing</h2>
+        </li>
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab3', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>Jobs</h2>
+        </li>
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab4', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>Servies</h2>
+        </li>
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab5', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>For sale</h2>
+        </li>
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab6', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>Discussion forums</h2>
+        </li>
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab7', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>Temp jobs</h2>
+        </li>
+        <li class="sidebar__title burger-menu__title" onclick="
+          activateTabs('tab8', 'list-box'),
+          MenuHandler('burger-menu').removeClass('burger-menu--active')">
+          <span class=" sidebar__arrow fas fa-arrow-left"></span>
+          <h2>Cvs</h2>
+        </li>
+      </ul>
+    </div>
+
+    <header class="header">
+      <h1 class="header__title">Norway</h1>
+
+      <div class="header__actions">
+        <a href="https://post.craigslist.org/c/osl?lang=en&cc=gb">Create a posting</a>
+        <span class="header__stick">|</span>
+        <a href="https://accounts.craigslist.org/login/home?lang=en&cc=gb">My account</a>
+      </div>
+      <button class="header__btn" onclick="MenuHandler('burger-menu').addClass('burger-menu--active')"
+        style="background: src='/img/close.svg' ;">
+      </button>
+    </header>
+
+    <nav class=" sidebar">
+      <ul class="sidebar__nav">
+        <li class="sidebar__title" onclick="activateTabs('tab1', 'list-box')">
+          <h2>Community</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+        <li class="sidebar__title" onclick="activateTabs('tab2', 'list-box')">
+          <h2>Housing</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+        <li class="sidebar__title" onclick="activateTabs('tab3', 'list-box')">
+          <h2>Jobs</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+        <li class="sidebar__title" onclick="activateTabs('tab4', 'list-box')">
+          <h2>Servies</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+        <li class="sidebar__title" onclick="activateTabs('tab5', 'list-box')">
+          <h2>For sale</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+        <li class="sidebar__title" onclick="activateTabs('tab6', 'list-box')">
+          <h2>Discussion forums</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+        <li class="sidebar__title" onclick="activateTabs('tab7', 'list-box')">
+          <h2>Temp jobs</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+        <li class="sidebar__title" onclick="activateTabs('tab8', 'list-box')">
+          <h2>Cvs</h2>
+          <span class=" sidebar__arrow fas fa-arrow-right"></span>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">
+
+
+      <div class="list-box list-box--active" id="tab1">
+        <h2><a href="https://oslo.craigslist.org/search/ccc">Community</a></h2>
+
+        <div class="list-wrapper">
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/act">Activities</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/ats">Artists</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/rid">Car pools</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/kid">Childcare</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/cls">Classes</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/eve">Events</h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/com">General</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/grp">Groups</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/vnn">Local news</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/laf">lost+found</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/mis">Missed connections</h3>
+              </a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/muc">Musicians</h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/pet">Pets</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/pol">Politics</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/rnr">Rants & raves</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/vol">Volunteers</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="list-box " id="tab2">
+        <h2> <a href="https://oslo.craigslist.org/search/hhh">Housing</a></h2>
+
+        <div class="list-wrapper">
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="">flats/housing</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">holiday rentals</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">housing/real estate for sale</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">housing swap</h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="">housing wanted</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">office / commercial</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">parking / storage</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">rooms/shared</h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="">rooms wanted</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">sub-lets / temporary</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="">for sale</h3></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="list-box " id="tab3">
+        <h2> <a href="https://oslo.craigslist.org/search/jjj">Jobs</a> </h2>
+
+        <div class="list-wrapper">
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="list-box " id="tab4">
+        <h2><a href="https://oslo.craigslist.org/search/bbb">Servies</a></h2>
+
+        <div class="list-wrapper">
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/bts">Beauty</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/aos">Cars/automotive</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/cms">Cell/mobile</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/cps">Computer</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/crs">creative</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/cys">Cycle</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/evs">Event</h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/fgs">Farm+garden</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/fns">Financial</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/hws">Health/well</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/hss">Household</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/rts">Housing/real estate</h3>
+              </a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/lbs">Labour/move</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/lgs">Legal</h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/lss">Lessons</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/mas">Marine</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/pas">Pet</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/sks">Skilled trade</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/biz">Sm biz ads</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/trv">Travel/hol</h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href="https://oslo.craigslist.org/search/wet">Write/ed/tran</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="list-box " id="tab5">
+        <h2><a href="https://oslo.craigslist.org/search/sss">For sale</a></h2>
+
+        <div class="list-wrapper">
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="list-box " id="tab6">
+        <h2> <a href="https://forums.craigslist.org/?areaID=105">Discussion forums</a>
+        </h2>
+
+        <div class="list-wrapper">
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="list-box " id="tab7">
+        <h2><a href="https://oslo.craigslist.org/search/ggg">Temp jobs</a></h2>
+
+        <div class="list-wrapper">
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+          <ul class="list-box__list">
+            <li>
+              <h3><a class="list-box__titled" href=""> </h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+            <li>
+              <h3><a class="list-box__titled" href=""></h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="list-box " id="tab8">
+        <h2><a href="https://oslo.craigslist.org/search/rrr">Cvs</a></h2>
+        <ul>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""> </h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""> </h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h3><a class="list-box__titled" href=""> </h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+          <li>
+            <h3><a class="list-box__titled" href=""></h3></a>
+          </li>
+        </ul>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__list">
+        <li>©2023 craigslist</li>
+        <li>
+          <a href="https://www.craigslist.org/about/help/?lang=en&cc=gb">help</a>
+        </li>
+        <li>
+          <a href="https://www.craigslist.org/about/scams?lang=en&cc=gb">safety</a>
+        </li>
+        <li>
+          <a href="https://www.craigslist.org/about/privacy.policy?lang=en&cc=gb">privacy</a>
+        </li>
+        <li>
+          <a href="https://forums.craigslist.org/?forumID=8">feedback</a>
+        </li>
+        <li>
+          <a href="https://www.craigslist.org/about/terms.of.use">terms</a>
+        </li>
+        <li>
+          <a href="https://www.craigslist.org/about/?lang=en&cc=gb">about</a>
+        </li>
+        <li>
+          <a href="https://www.craigslist.org/about/craigslist_app?lang=en&cc=gb">craigslist app</a>
+        </li>
+        <li>
+          <a href="https://www.craigslist.org/about/craigslist_is_hiring?lang=en&cc=gb">cl is hiring</a>
+        </li>
+        <li>
+          <a href="https://oslo.craigslist.org/sitemap.html">sitemap</a>
+        </li>
+
+    </footer>
+  </div>
+
+  </div>
+</body>
+
+</html>
