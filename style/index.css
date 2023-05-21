@@ -53,7 +53,6 @@ a:hover {
   height: max-content;
 
   display: flex;
-  justify-content: space-between;
 
   grid-area: 1 / 1 / 2 / 4;
   padding: 16px 0;
@@ -64,9 +63,11 @@ a:hover {
 }
 
 .header__btn {
+  display: none;
   width: 32px;
-  height: 26px;
-  margin-left: 5px;
+  height: 30px;
+
+  margin-left: 10px;
   margin-top: 3px;
 
   background: url("/img/menu.svg");
@@ -75,14 +76,17 @@ a:hover {
 
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .header__actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
+  align-items: center;
 
   column-gap: 20px;
+  margin-left: auto;
 }
 
 .sidebar {
@@ -206,6 +210,7 @@ footer {
 
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .burger-menu--active {
