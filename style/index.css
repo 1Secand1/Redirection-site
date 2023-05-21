@@ -31,10 +31,6 @@ a {
   text-decoration: none;
   transition: all 0.5s ease-in;
 }
-a:hover {
-  color: #4976e8;
-  transition: all 0.5s ease-in;
-}
 
 .wrapper {
   display: grid;
@@ -110,15 +106,6 @@ a:hover {
 .sidebar__arrow {
   color: white;
 }
-.sidebar__nav > li:hover {
-  background: #00000010;
-  border-radius: 5px;
-}
-.sidebar__nav > li:hover > .sidebar__arrow {
-  visibility: inherit;
-  transition: color 1s ease-in;
-  color: black;
-}
 
 .sidebar__nav > li:focus {
   border: solid 1px;
@@ -154,10 +141,6 @@ main {
 }
 .list-box__titled {
   color: rgb(77, 77, 77);
-}
-.list-box__titled:hover {
-  color: black;
-  transition: color 0.5s ease;
 }
 
 .list-box__title {
@@ -276,4 +259,23 @@ footer {
 }
 .footer {
   font-size: 14px;
+}
+@media (pointer: fine) {
+  .sidebar__nav > li:hover {
+    background: #00000010;
+    border-radius: 5px;
+  }
+  .sidebar__nav > li:hover > .sidebar__arrow {
+    visibility: inherit;
+    transition: color 1s ease-in;
+    color: black;
+  }
+  a:hover {
+    color: #4976e8;
+    transition: all 0.5s ease-in;
+  }
+  .list-box__titled:hover {
+    color: black;
+    transition: color 0.5s ease;
+  }
 }
